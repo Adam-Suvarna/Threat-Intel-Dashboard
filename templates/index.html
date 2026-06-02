@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Threat Intelligence Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="scanline"></div>
+    <div class="page-wrap">
+
+        <div class="top-bar">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="logo-text">ThreatIntel</div>
+                    <div class="logo-sub">IP Reputation Engine</div>
+                </div>
+            </div>
+            <div class="status-pill">
+                <div class="status-dot"></div>
+                AbuseIPDB Live
+            </div>
+        </div>
+
+        <div class="hero">
+            <div class="hero-label">Real-time threat intelligence</div>
+            <h1>Is this IP address<br><span>a threat?</span></h1>
+            <p>Query the AbuseIPDB threat intelligence database in real time. Get abuse confidence scores, ISP details, country of origin, and recent attack reports for any IP address.</p>
+        </div>
+
+        <div class="search-section">
+            <form class="search-form" action="/check" method="POST">
+                <div class="input-prefix">ipv4 / ipv6</div>
+                <input
+                    type="text"
+                    name="ip_address"
+                    placeholder="e.g. 118.25.6.39"
+                    required
+                    autofocus
+                    spellcheck="false"
+                    autocomplete="off"
+                >
+                <button type="submit">Analyse</button>
+            </form>
+
+            {% if error %}
+            <div class="error-banner">{{ error }}</div>
+            {% endif %}
+        </div>
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-number">1B+</div>
+                <div class="stat-desc">Abuse reports in the AbuseIPDB database</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">90</div>
+                <div class="stat-desc">Days of historical report data queried per check</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">0-100</div>
+                <div class="stat-desc">Confidence score — higher means more likely malicious</div>
+            </div>
+        </div>
+
+        <div class="data-source">
+            <div class="source-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+            </div>
+            <div class="source-text">
+                <h4>Powered by AbuseIPDB</h4>
+                <p>Data is sourced from AbuseIPDB, a community-driven threat intelligence platform used by SOC teams, system administrators, and security analysts worldwide. Reports cover the last 90 days of abuse activity.</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
