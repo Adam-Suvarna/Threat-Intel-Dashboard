@@ -8,7 +8,7 @@ A live web application for checking IP address reputation against real-world thr
 
 ## What It Does
 
-Enter any IP address and get an instant threat report powered by the AbuseIPDB database — the same source used by SOC teams and security analysts worldwide.
+Enter any IP address and get an instant threat report powered by the AbuseIPDB database, the same source used by SOC teams and security analysts worldwide.
 
 Each result shows:
 
@@ -26,9 +26,9 @@ Visit the live URL above, enter any IPv4 or IPv6 address into the search bar, an
 
 Some IPs to try:
 
-- `8.8.8.8` — Google DNS, expect Clean
-- `1.1.1.1` — Cloudflare DNS, expect Clean
-- `185.220.101.1` — Tor exit node, expect Malicious
+- `8.8.8.8` - Google DNS, expect Clean
+- `1.1.1.1` - Cloudflare DNS, expect Clean
+- `185.220.101.1` - Tor exit node, expect Malicious
 
 ---
 
