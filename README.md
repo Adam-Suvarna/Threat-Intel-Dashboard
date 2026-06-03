@@ -32,6 +32,18 @@ Some IPs to try:
 
 ---
 
+---
+
+## Example Usage
+
+The two examples below show the comparison results of clean and malicious
+
+![Clean IP result](screenshots/Clean_IP.png)
+
+![Malicious IP result](screenshots/Malicious_IP.png)
+
+---
+
 ## Stack
 
 Python, Flask, AbuseIPDB API v2, Jinja2, deployed on Render
