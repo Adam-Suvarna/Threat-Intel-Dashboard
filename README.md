@@ -4,6 +4,8 @@ A live web application for checking IP address reputation against real-world thr
 
 **Live:** https://threat-intel-dashboard-cya6.onrender.com
 
+![Dashboard](screenshots/Threat_Intelligence_Dashboard_HomePage.png)
+
 ---
 
 ## What It Does
