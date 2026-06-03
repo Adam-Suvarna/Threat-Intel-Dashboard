@@ -32,8 +32,6 @@ Some IPs to try:
 
 ---
 
----
-
 ## Example Usage
 
 The two examples below show the comparison results of clean and malicious
